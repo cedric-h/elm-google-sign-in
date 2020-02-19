@@ -13,5 +13,7 @@
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+	  "elm-google-sign-in": "1.0.0"
+  }
 }

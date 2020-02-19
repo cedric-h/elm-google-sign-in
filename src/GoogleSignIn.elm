@@ -3,7 +3,8 @@ module GoogleSignIn exposing
     , Attribute
     , idAttr
     , onSignIn
-    , Profile, ClientId
+    , Profile
+    , ClientId(..), encodeId
     )
 
 {-| Elm bindings to the "Sign in With Google" widget
@@ -31,9 +32,14 @@ See the github for more information: <https://github.com/cedric-h/elm-google-sig
 @docs onSignIn
 
 
-## Supporting Types
+## Profile
 
-@docs Profile, ClientId
+@docs Profile
+
+
+## ClientId & co.
+
+@docs ClientId, encodeId
 
 -}
 
@@ -70,6 +76,9 @@ type ClientId
     = Id String
 
 
+{-| Turns a ClientId into a JSON value,
+mainly for shipping through a port.
+-}
 encodeId : ClientId -> Value
 encodeId (Id id) =
     Encode.string id

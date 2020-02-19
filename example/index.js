@@ -1,4 +1,4 @@
-import ElmGoogleSignIn from '../index.js';
+import ElmGoogleSignIn from 'elm-google-sign-in/index.js';
 import { Elm } from './src/Main.elm';
 
 let googleSignOutComplete = new EventTarget();
