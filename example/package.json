@@ -14,6 +14,6 @@
     "webpack-dev-server": "^3.1.0"
   },
   "dependencies": {
-	  "elm-google-sign-in": "1.0.0"
+    "elm-google-sign-in": "1.0.0"
   }
 }
