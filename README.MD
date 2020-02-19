@@ -47,6 +47,12 @@ Keep in mind that when constructing your `ClientId` with `GoogleSignIn.Id`,
 you need only supply the portion of the id leading up to the first `.`,
 so in this case, `421355382458-d5e1j581a9atnin2t9vfsbd62fkqkmie`.
 
+## Shortcomings
+Currently, minimal aesthetic configuration of the sign in buttons is possible,
+although Google allows fairly extensive customization including light and dark themes for the button
+which can be enabled. Currently, dark is the only theme accessible through this package.
+PRs are welcome. More information on the possible customization of the buttons that is yet
+to be wrapped by this package can be found [here](https://developers.google.com/identity/sign-in/web/build-button).
 
 ## Minimal code example
 Accompanying JS and CSS for this example, as well as webpack configurations,
