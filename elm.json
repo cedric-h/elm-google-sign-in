@@ -3,7 +3,7 @@
     "name": "cedric-h/elm-google-sign-in",
     "summary": "Elm bindings to the \"Sign in With Google\" widget",
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "exposed-modules": [
         "GoogleSignIn"
     ],
