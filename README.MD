@@ -7,7 +7,7 @@ This library makes it easy to insert an official "Sign in with Google" button on
 - **Encapsulated**: Google's API is only loaded in iframes,
 and these iframes are only active for the shortest amount of time possible:
 while the button is on the screen and for a short amount of time after the `googleSignOut` event is sent.
-This means that any data collection that Google attempts to do is as restricted as possible when using Google's APIs.
+This means that any data collection that Google attempts to do is as restricted as is possible when using Google's APIs.
 - **Idiomatic**: Pass a `msg` constructor to the `onSignIn` attribute for the Google sign in button
 just like you'd pass a `msg` constructor to the `onClick` attribute on a normal button.
 Sign out from anywhere in your application by issuing a `Cmd`.
