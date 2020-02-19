@@ -1,6 +1,8 @@
 # Elm Google Sign In
 This library makes it easy to insert an official "Sign in with Google" button onto your webpage.
 
+![](full.gif)
+
 ## Features
 - **Encapsulated**: Google's API is only loaded in iframes,
 and these iframes are only active for the shortest amount of time possible:
@@ -50,8 +52,8 @@ so in this case, `421355382458-d5e1j581a9atnin2t9vfsbd62fkqkmie`.
 
 ## Shortcomings
 Currently, minimal aesthetic configuration of the sign in buttons is possible,
-although Google allows fairly extensive customization including light and dark themes for the button
-which can be enabled. Currently, dark is the only theme accessible through this package.
+although Google allows fairly extensive customization including light and dark themes for the buttons.
+Currently, the dark theme for the button is enabled by default and inconfigurable.
 PRs are welcome. More information on the possible customization of the buttons that is yet
 to be wrapped by this package can be found [here](https://developers.google.com/identity/sign-in/web/build-button).
 
