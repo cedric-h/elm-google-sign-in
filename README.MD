@@ -29,7 +29,7 @@ which you can pass to a `GoogleSignIn.view` when rendering your Google sign in b
 ## Sessions
 If the user closes your page and then opens it again without logging out,
 as soon as the button is rendered on the screen the `onSignIn` event is fired.
-This happens due to the way Google designed the button.
+This is a direct result of the internal implementation of the API Google authored.
 
 ## ClientId
 Not to be confused with the `idToken` discussed above,
