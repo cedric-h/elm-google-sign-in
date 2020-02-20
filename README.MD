@@ -26,6 +26,11 @@ Through this package, the `idToken`s can be found as a field on the `Profile` re
 which is passed to the function passed to the `GoogleSignIn.onSignIn` attribute,
 which you can pass to a `GoogleSignIn.view` when rendering your Google sign in button.
 
+## Sessions
+If the user closes your page and then opens it again without logging out,
+as soon as the button is rendered on the screen the `onSignIn` event is fired.
+This happens due to the way Google designed the button.
+
 ## ClientId
 Not to be confused with the `idToken` discussed above,
 which is provided to you by Google so you can make sure your users are legitimate,
@@ -57,11 +62,39 @@ Currently, the dark theme for the button is enabled by default and inconfigurabl
 PRs are welcome. More information on the possible customization of the buttons that is yet
 to be wrapped by this package can be found [here](https://developers.google.com/identity/sign-in/web/build-button).
 
+## Using this in pure Elm projects
+Overall, not much should change.
+Because this package needs to use JS to bind Google's APIs to Elm,
+you need to have webpack or some other tool like parcel to bundle the JS with your Elm code.
+The example uses webpack.
+You can also bundle in CSS, HTML, Rust, etc. this way, and run tools like Babel over your JS code.
+Webpack will also minify and obsfuscate in production where possible.
+Bring `index.js`, `package.json`, and both `webpack.*.config.js` files into your project.
+If your application's `Main.elm` is in `<project>/src/Main.elm`, then drop all of these files right in `<project>/`.
+If your application's main file isn't `Main.elm`, you may need to
+change the `import { Elm } from './src/Main.elm';` line in `index.js`.
+`npm run serve` is the command to run for development,
+whereas `npm run build` will fill the `dist/` directory with files you can serve from any static web host for production.
+
+## My backend isn't in Node, do I still need all of this npm stuff?
+Webpack simply bundles together your front end code. It uses [node.js](https://nodejs.org) but it isn't a backend.
+The dev-server `npm run serve` uses is completely optional, you can also use any other static file host during development.
+You can use the static files `npm run build` produces with any backend.
+
 ## Minimal code example
 Accompanying JS and CSS for this example, as well as webpack configurations,
 can be found in the `/example` directory.
 Simply cloning the example and running `npm run serve` should be sufficient.
 Pillaging the accompanying webpack configuration is highly encouraged.
+You can run the example from scratch (ensure git, npm, and Elm are installed) with
+```
+git clone https://github.com/cedric-h/elm-google-sign-in.git
+cd elm-google-sign-in
+cd example
+npm install
+npm run serve
+```
+Main.elm
 ```Elm
 port module Main exposing (..)
 
